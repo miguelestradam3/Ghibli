@@ -32,17 +32,6 @@ body {
   font-family: var(--default-font);
 }
 
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  text-decoration: none;
-}
-
 h1,
 h2,
 h3,
@@ -63,15 +52,6 @@ h6 {
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
-}
-
-.header .logo {
-  line-height: 1;
-}
-
-.header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
 }
 
 .header .logo h1 {
@@ -112,19 +92,6 @@ h6 {
   .header .navmenu {
     order: 3;
   }
-}
-
-.scrolled .header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: -1;
-  pointer-events: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  /* optional border */
 }
 
 /*--------------------------------------------------------------
@@ -222,19 +189,6 @@ h6 {
 
 .footer .footer-contact p {
   margin-bottom: 5px;
-}
-
-.footer .copyright {
-  padding: 30px 0;
-}
-
-.footer .copyright p {
-  margin-bottom: 0;
-}
-
-.footer .credits {
-  margin-top: 5px;
-  font-size: 13px;
 }
 
 .footer .social-links a {
