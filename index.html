@@ -31,12 +31,50 @@
         🎬 Studio Ghibli Explorer
     </h1>
 
-<div id="movies" class="row g-4"></div>
+    <div class="container my-4">
 
-<div
-    id="pagination"
-    class="d-flex justify-content-center my-5">
-</div>
+        <div class="row g-3 align-items-center">
+
+            <!-- Search -->
+            <div class="col-md-4">
+                <input type="text"
+                    id="searchInput"
+                    class="form-control"
+                    placeholder="Search movies..." />
+            </div>
+
+            <!-- Director Filter -->
+            <div class="col-md-3">
+                <select id="directorFilter" class="form-select">
+                    <option value="">All Directors</option>
+                </select>
+            </div>
+
+            <!-- Sort -->
+            <div class="col-md-3">
+                <select id="sortFilter" class="form-select">
+                    <option value="">Sort By</option>
+                    <option value="year-asc">Year ↑</option>
+                    <option value="year-desc">Year ↓</option>
+                    <option value="score-desc">Score ↓</option>
+                    <option value="score-asc">Score ↑</option>
+                    <option value="title-asc">Title A-Z</option>
+                    <option value="title-desc">Title Z-A</option>
+                </select>
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div id="movies" class="row g-4"></div>
+
+    <div
+        id="pagination"
+        class="d-flex justify-content-center my-5">
+    </div>
 
 </div>
 
