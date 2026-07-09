@@ -1,6 +1,7 @@
 const API_BASE = "https://ghibliapi.vercel.app/films";
 
 const container = document.getElementById("movie-details");
+let characters = [];
 
 // Get ID from URL
 const params = new URLSearchParams(window.location.search);
@@ -33,6 +34,39 @@ async function getMovieDetails() {
 
 async function renderMovie(movie) {
 
+    characters = await Promise.all(
+        movie.people.map(async (url) => {
+            const response = await fetch(url);
+            const person = await response.json();
+
+            return {
+                name: person.name,
+                age: person.age,
+                eye_color: person.eye_color,
+                hair_color: person.hair_color,
+                gender: person.gender
+            };
+        })
+    );
+
+    const validCharacters = characters.filter(character =>
+        character &&
+        character.name &&
+        character.name !== "undefined"
+    );
+
+    const charactersHTML = validCharacters.map(character => `
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="text-black">${character.name}</h5>
+                <p><strong>Age:</strong> ${character.age || "Unknown"}</p>
+                <p><strong>Gender:</strong> ${character.gender || "Unknown"}</p>
+                <p><strong>Eye Color:</strong> ${character.eye_color || "Unknown"}</p>
+                <p><strong>Hair Color:</strong> ${character.hair_color || "Unknown"}</p>
+            </div>
+        </div>
+    `).join("");
+
     container.innerHTML = `
         <div class="card shadow">
 
@@ -42,9 +76,9 @@ async function renderMovie(movie) {
 
             <div class="card-body">
 
-                <h1>${movie.title}</h1>
-                <h4>${movie.original_title}</h4>
-                <p><em>${movie.original_title_romanised}</em></p>
+                <h1 class="text-black">${movie.title}</h1>
+                <h4 class="text-black">${movie.original_title}</h4>
+                <p class="text-black"><em>${movie.original_title_romanised}</em></p>
 
                 <hr>
 
@@ -57,6 +91,25 @@ async function renderMovie(movie) {
                 <hr>
 
                 <p>${movie.description}</p>
+
+                ${charactersHTML ? `
+                    <hr>
+
+                    <button
+                        class="btn btn-dark mb-3"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#charactersSection"
+                        aria-expanded="false"
+                        aria-controls="charactersSection">
+
+                        Show characters
+                    </button>
+
+                    <div class="collapse" id="charactersSection">
+                        ${charactersHTML}
+                    </div>
+                ` : ""}
 
                 <hr>
 
