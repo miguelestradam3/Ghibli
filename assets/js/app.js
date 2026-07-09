@@ -88,8 +88,8 @@ function createMovieCard(movie) {
                         ${movie.title}
                     </h5>
 
-                    <p class="text-muted mb-2">
-                        ${movie.original_title || ''}
+                    <p class="mb-2">
+                        <span class="badge bg-secondary">${movie.original_title}</span>
                     </p>
 
                     <!-- Info -->
@@ -98,7 +98,12 @@ function createMovieCard(movie) {
                     </p>
 
                     <p class="mb-1">
-                        <strong>Score:</strong> ${movie.rt_score || 'N/A'}%
+                        <div class="progress">
+                            <div class="progress-bar bg-success"
+                                style="width: ${movie.rt_score}%;">
+                                ${movie.rt_score}%
+                            </div>
+                        </div>
                     </p>
 
                     <!-- Footer -->
