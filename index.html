@@ -14,6 +14,11 @@
     <meta property="og:url" content="https://your-domain.com/" />
     <meta property="og:site_name" content="Ghibli Explorer" />
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Studio Ghibli Explorer" />
@@ -29,28 +34,106 @@
     <link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body>
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container position-relative d-flex align-items-center justify-content-between">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-            <h1 class="sitename">Ghibli Explorer</h1>
-        </a>
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">Ghibli Explorer</h1>
+      </a>
 
-        <a class="btn-getstarted" href="https://ghibliapi.dev/">API</a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#explorer">Movies</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a target="_blank" class="btn-getstarted" href="https://ghibliapi.dev/">API</a>
+
+    </div>
+  </header>
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background">
+
+        <img class="image" src="assets/img/hero.webp" alt="">
+
+        <div class="container">
+
+            <div class="row align-items-center gy-5">
+
+                <!-- Hero Content -->
+                <div class="col-md-6">
+
+                    <h1 class="display-3 fw-bold mb-4">
+                        Where Every Journey
+                        <span class="text-accent">Begins with Wonder</span>
+                    </h1>
+
+                    <p class="lead mb-4">
+                        From enchanted forests and floating castles to unforgettable
+                        heroes and magical creatures, explore the complete collection
+                        of Studio Ghibli films and discover the worlds that have
+                        inspired generations of fans.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3">
+
+                        <a href="#movies" class="btn">
+                            Explore Movies
+                        </a>
+
+                        <a href="#contact" class="btn">
+                            Contact me
+                        </a>
+
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow border-0">
+
+                        <img src="assets/img/hero.jpg"
+                            class="card-img-top"
+                            alt="Anime Explorer">
+
+                        <div class="card-body p-5">
+
+                            <h1 class="display-4 fw-bold">
+                                Welcome to my <span class="text-primary">Anime Explorer</span>
+                            </h1>
+
+                            <hr>
+
+                            <p class="lead">
+                                Explore a vast collection of anime, discover memorable characters,
+                                iconic locations, and learn more about the stories that have inspired
+                                millions of fans around the world.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-    </header>
-    <main class="main">
-        <section class="section">
+
+        </section>
+        <!-- /Hero Section -->
+        <section id="explorer" class="section">
             <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
+            <div class="container-fluid section-title">
                 <h2>Explore</h2>
                 <p>Get to know some movie classics (Descriptions, scores and more)</p>
             </div>
             <!-- End Section Title -->
-            <div class="container py-5">
+            <div class="container-fluid py-5">
 
-                <div class="container my-4">
+                <div class="container-fluid my-4">
 
                     <div class="row g-3 align-items-center">
 
@@ -97,11 +180,54 @@
 
             </div>
         </section>
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+
+        <!-- Section Title -->
+        <div class="container section-title">
+            <h2>Contact</h2>
+            <p>I'm always interested in new opportunities, collaborations, and exciting projects. Whether you have a question, a project in mind, or just want to connect, feel free to get in touch. I'll do my best to respond as soon as possible.</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+            <div class="row gy-4">
+
+            <div class="col-lg-12">
+                <form action="https://formcarry.com/s/EncKrGJV-CY" method="POST" class="email-form">
+                    <div class="row gy-4">
+
+                        <div class="col-md-6">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+
+                        <div class="col-md-6">
+                        <input type="email" id="email" class="form-control" name="email" placeholder="Your Email" required>
+                        </div>
+
+                        <div class="col-md-12">
+                        <textarea class="form-control" id="message" name="message" rows="6" placeholder="Message" required></textarea>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <button type="submit">Send Message</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+            </div>
+
+        </div>
+
+        </section>
+        <!-- /Contact Section -->
     </main>
     <footer id="footer" class="footer light-background">
 
         <div class="footer-top">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row gy-4">
             <div class="col-lg-4 col-md-4 footer-about">
                 <img src="assets/img/logo.png" class="img-fluid"/>
@@ -132,7 +258,7 @@
         </div>
 
         <div class="copyright text-center">
-        <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+        <div class="container-fluid d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
 
             <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
             <a href="https://www.linkedin.com/in/miguel-estrada-46ba46367/"><i class="bi bi-linkedin"></i></a>
@@ -143,7 +269,8 @@
         </div>
 
     </footer>
-    <script src="assets/js/app.js"></script>.
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>.
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>

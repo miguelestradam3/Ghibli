@@ -5,7 +5,7 @@ document.getElementById("searchInput").addEventListener("input", applyFilters);
 document.getElementById("directorFilter").addEventListener("change", applyFilters);
 document.getElementById("sortFilter").addEventListener("change", applyFilters);
 
-const moviesPerPage = 6;
+const moviesPerPage = 8;
 
 let currentPage = 1;
 let movies = [];
@@ -35,6 +35,7 @@ async function getMovies() {
         showLoading();
         const response = await fetch(API_URL);
         movies = await response.json();
+        console.log(movies);
 
         filteredMovies = movies;
 
@@ -72,7 +73,7 @@ function displayMovies() {
 function createMovieCard(movie) {
 
     return `
-        <div class="col-md-4">
+        <div class="col-md-3 col-lg-3 col-sm-12">
 
             <div class="card h-100 shadow-sm movie-card">
 
@@ -161,8 +162,7 @@ function goToPage(page) {
 
     displayMovies();
 
-    window.scrollTo({
-        top: 0,
+    document.getElementById("movies").scrollIntoView({
         behavior: "smooth"
     });
 

@@ -58,7 +58,7 @@ async function renderMovie(movie) {
     const charactersHTML = validCharacters.map(character => `
         <div class="card mb-3">
             <div class="card-body">
-                <h5 class="text-black">${character.name}</h5>
+                <h5>${character.name}</h5>
                 <p><strong>Age:</strong> ${character.age || "Unknown"}</p>
                 <p><strong>Gender:</strong> ${character.gender || "Unknown"}</p>
                 <p><strong>Eye Color:</strong> ${character.eye_color || "Unknown"}</p>
@@ -76,9 +76,9 @@ async function renderMovie(movie) {
 
             <div class="card-body">
 
-                <h1 class="text-black">${movie.title}</h1>
-                <h4 class="text-black">${movie.original_title}</h4>
-                <p class="text-black"><em>${movie.original_title_romanised}</em></p>
+                <h1>${movie.title}</h1>
+                <h4>${movie.original_title}</h4>
+                <p><em>${movie.original_title_romanised}</em></p>
 
                 <hr>
 
