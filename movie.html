@@ -2,26 +2,115 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Movie Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details — Studio Ghibli Explorer</title>
+    <link rel="icon" href="assets/img/logo.png">
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
     <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="movie-details-page">
 
-<div class="container py-5" id="movie-details">
-    <div class="col-12 text-center my-5">
+    <!-- Header -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-        <div class="spinner-border text-success"
-                role="status">
-            <span class="visually-hidden">Loading...</span>
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <img src="assets/img/logo.png" alt="Logo" class="d-inline-block">
+                <h1 class="sitename">Ghibli Explorer</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li><a href="index.html#explorer">Movies</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a target="_blank" class="btn-getstarted" href="https://ghibliapi.dev/">API</a>
+
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main details-main">
+        <div id="movie-details" class="container-fluid px-0">
+            <!-- Loading Spinner State -->
+            <div class="container py-5 text-center my-5">
+                <div class="spinner-border text-info" style="width: 3.5rem; height: 3.5rem;" role="status">
+                    <span class="visually-hidden">Loading movie details...</span>
+                </div>
+                <h4 class="mt-4 text-light fw-normal">Loading complete movie specifications...</h4>
+                <p class="text-secondary">Fetching characters, locations, species, and vehicles from the Studio Ghibli API</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer light-background">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6 footer-about">
+                        <div class="logo mb-3">
+                            <img src="assets/img/logo.png" alt="Ghibli Logo" style="max-height: 48px; width: auto;" />
+                        </div>
+                        <p class="text-secondary">Studio Ghibli Explorer — Discover classic anime films, memorable characters, mythical locations, and cinematic wonders.</p>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-links">
+                        <h4>Other projects</h4>
+                        <ul>
+                            <li><a href="https://github.com/miguelestradam3/pokedex" target="_blank" rel="noopener">Pokedex</a></li>
+                            <li><a href="https://github.com/miguelestradam3/machine_learning_classifier" target="_blank" rel="noopener">Jupyter - Machine Learning</a></li>
+                            <li><a href="https://github.com/miguelestradam3/rick_and_morty" target="_blank" rel="noopener">Rick and Morty</a></li>
+                            <li><a href="https://github.com/miguelestradam3/python_images_editor" target="_blank" rel="noopener">Python Image Editor</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-12 footer-links">
+                        <h4>Technologies used in this project</h4>
+                        <ul>
+                            <li><a href="#">HTML5 / Semantic Markup</a></li>
+                            <li><a href="#">CSS3 / Responsive Flex & Grid</a></li>
+                            <li><a href="#">JavaScript (ES6+ Async/Await)</a></li>
+                            <li><a href="#">Bootstrap 5.3 & Icons</a></li>
+                            <li><a href="#">Studio Ghibli REST API</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
-    </div>
-</div>
+        <div class="copyright text-center py-4">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <span class="text-secondary small">Studio Ghibli Explorer &bull; Built with passion</span>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/miguel-estrada-46ba46367/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/miguelestradam3" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<script src="assets/js/movie.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main UI script (navigation toggle & scroll) -->
+    <script src="assets/js/main.js"></script>
+    <!-- Movie Details logic -->
+    <script src="assets/js/movie.js"></script>
 </body>
 </html>

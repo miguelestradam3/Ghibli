@@ -11,7 +11,6 @@
     <meta property="og:title" content="Studio Ghibli Explorer" />
     <meta property="og:description" content="Explore Studio Ghibli films, characters, locations, species, and vehicles in a clean minimalist interface." />
     <meta property="og:image" content="assets/img/logo.png" />
-    <meta property="og:url" content="https://your-domain.com/" />
     <meta property="og:site_name" content="Ghibli Explorer" />
 
     <!-- Fonts -->
@@ -33,245 +32,259 @@
 
     <link href="assets/css/main.css" rel="stylesheet">
 </head>
-<body>
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+<body class="index-page">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <h1 class="sitename">Ghibli Explorer</h1>
-      </a>
+    <!-- Header Navigation -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#explorer">Movies</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <img src="assets/img/logo.png" alt="Ghibli Logo" class="d-inline-block">
+                <h1 class="sitename">Ghibli Explorer</h1>
+            </a>
 
-      <a target="_blank" class="btn-getstarted" href="https://ghibliapi.dev/">API</a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#explorer">Movies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
 
-    </div>
-  </header>
-    <main class="main">
-        <!-- Hero Section -->
-        <section id="hero" class="hero section dark-background">
-
-        <img class="image" src="assets/img/hero.webp" alt="">
-
-        <div class="container">
-
-            <div class="row align-items-center gy-5">
-
-                <!-- Hero Content -->
-                <div class="col-md-6">
-
-                    <h1 class="display-3 fw-bold mb-4">
-                        Where Every Journey
-                        <span class="text-accent">Begins with Wonder</span>
-                    </h1>
-
-                    <p class="lead mb-4">
-                        From enchanted forests and floating castles to unforgettable
-                        heroes and magical creatures, explore the complete collection
-                        of Studio Ghibli films and discover the worlds that have
-                        inspired generations of fans.
-                    </p>
-
-                    <div class="d-flex flex-wrap gap-3">
-
-                        <a href="#movies" class="btn">
-                            Explore Movies
-                        </a>
-
-                        <a href="#contact" class="btn">
-                            Contact me
-                        </a>
-
-                    </div>
-
-                </div>
-                <div class="col-md-6">
-                    <div class="card shadow border-0">
-
-                        <img src="assets/img/hero.jpg"
-                            class="card-img-top"
-                            alt="Anime Explorer">
-
-                        <div class="card-body p-5">
-
-                            <h1 class="display-4 fw-bold">
-                                Welcome to my <span class="text-primary">Anime Explorer</span>
-                            </h1>
-
-                            <hr>
-
-                            <p class="lead">
-                                Explore a vast collection of anime, discover memorable characters,
-                                iconic locations, and learn more about the stories that have inspired
-                                millions of fans around the world.
-                            </p>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
+            <a target="_blank" rel="noopener" class="btn-getstarted" href="https://ghibliapi.dev/">API</a>
 
         </div>
+    </header>
 
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background">
+            <img class="image" src="assets/img/hero.webp" alt="Ghibli Forest Wallpaper">
+
+            <div class="container">
+                <div class="row align-items-center gy-5">
+
+                    <!-- Hero Content -->
+                    <div class="col-12 col-lg-6">
+                        <div class="hero-badge d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3 small fw-semibold">
+                            <i class="bi bi-stars text-accent"></i> The Magic of Hayao Miyazaki & Studio Ghibli
+                        </div>
+
+                        <h1 class="hero-heading fw-bold mb-4">
+                            Where Every Journey
+                            <span class="text-accent d-block">Begins with Wonder</span>
+                        </h1>
+
+                        <p class="lead mb-4 text-light text-opacity-90 hero-lead">
+                            From enchanted forests and floating castles to unforgettable heroes and magical creatures, explore the complete collection of Studio Ghibli films and discover the worlds that have inspired generations.
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#explorer" class="btn btn-accent rounded-pill px-4 py-2 py-sm-3 fw-semibold">
+                                <i class="bi bi-film me-2"></i>Explore Movies
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light rounded-pill px-4 py-2 py-sm-3 fw-semibold">
+                                Contact me
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero Promo Card -->
+                    <div class="col-12 col-lg-6">
+                        <div class="card shadow-lg border-0 rounded-4 overflow-hidden hero-card">
+                            <img src="assets/img/hero.jpg"
+                                 class="card-img-top hero-card-img"
+                                 alt="Anime Explorer Preview">
+
+                            <div class="card-body p-4 p-md-5">
+                                <h2 class="h1 fw-bold text-white mb-2">
+                                    Welcome to my <span class="text-accent">Anime Explorer</span>
+                                </h2>
+                                <hr class="border-secondary border-opacity-50 my-3">
+                                <p class="lead text-light text-opacity-80 fs-6 mb-0">
+                                    Explore a vast collection of anime classics, discover memorable characters, iconic locations, unique species, flying vehicles, and full specifications powered by the Studio Ghibli API.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
         <!-- /Hero Section -->
+
+        <!-- Explorer Section -->
         <section id="explorer" class="section">
             <!-- Section Title -->
-            <div class="container-fluid section-title">
+            <div class="container section-title">
                 <h2>Explore</h2>
-                <p>Get to know some movie classics (Descriptions, scores and more)</p>
+                <p>Browse the legendary catalogue, filter by director, sort by score or year, and inspect complete film specifications.</p>
             </div>
-            <!-- End Section Title -->
-            <div class="container-fluid py-5">
 
-                <div class="container-fluid my-4">
-
+            <div class="container">
+                <!-- Filters Toolbar -->
+                <div class="filter-toolbar p-3 p-md-4 rounded-4 mb-4 border border-secondary border-opacity-25 shadow-sm">
                     <div class="row g-3 align-items-center">
 
                         <!-- Search -->
-                        <div class="col-md-4">
-                            <input type="text"
-                                id="searchInput"
-                                class="form-control"
-                                placeholder="Search movies..." />
+                        <div class="col-12 col-md-4">
+                            <div class="input-group">
+                                <span class="input-group-text bg-dark border-secondary border-opacity-50 text-secondary">
+                                    <i class="bi bi-search"></i>
+                                </span>
+                                <input type="text"
+                                       id="searchInput"
+                                       class="form-control bg-dark text-light border-secondary border-opacity-50"
+                                       placeholder="Search movies..."
+                                       aria-label="Search movies" />
+                            </div>
                         </div>
 
                         <!-- Director Filter -->
-                        <div class="col-md-4">
-                            <select id="directorFilter" class="form-select">
-                                <option value="">All Directors</option>
-                            </select>
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="input-group">
+                                <span class="input-group-text bg-dark border-secondary border-opacity-50 text-secondary">
+                                    <i class="bi bi-person-video"></i>
+                                </span>
+                                <select id="directorFilter"
+                                        class="form-select bg-dark text-light border-secondary border-opacity-50"
+                                        aria-label="Filter by Director">
+                                    <option value="">All Directors</option>
+                                </select>
+                            </div>
                         </div>
 
-                        <!-- Sort -->
-                        <div class="col-md-4">
-                            <select id="sortFilter" class="form-select">
-                                <option value="">Sort By</option>
-                                <option value="year-asc">Year ↑</option>
-                                <option value="year-desc">Year ↓</option>
-                                <option value="score-desc">Score ↓</option>
-                                <option value="score-asc">Score ↑</option>
-                                <option value="title-asc">Title A-Z</option>
-                                <option value="title-desc">Title Z-A</option>
-                            </select>
+                        <!-- Sort Filter -->
+                        <div class="col-12 col-sm-6 col-md-4">
+                            <div class="input-group">
+                                <span class="input-group-text bg-dark border-secondary border-opacity-50 text-secondary">
+                                    <i class="bi bi-sort-down"></i>
+                                </span>
+                                <select id="sortFilter"
+                                        class="form-select bg-dark text-light border-secondary border-opacity-50"
+                                        aria-label="Sort movies">
+                                    <option value="">Sort By</option>
+                                    <option value="year-desc">Year (Newest first)</option>
+                                    <option value="year-asc">Year (Oldest first)</option>
+                                    <option value="score-desc">Score (Highest first)</option>
+                                    <option value="score-asc">Score (Lowest first)</option>
+                                    <option value="title-asc">Title (A-Z)</option>
+                                    <option value="title-desc">Title (Z-A)</option>
+                                </select>
+                            </div>
                         </div>
 
                     </div>
-
                 </div>
 
-                <hr>
-
+                <!-- Movies Responsive Grid -->
                 <div id="movies" class="row g-4"></div>
 
-                <div
-                    id="pagination"
-                    class="d-flex justify-content-center my-5">
-                </div>
-
+                <!-- Pagination Controls -->
+                <div id="pagination" class="d-flex justify-content-center my-5"></div>
             </div>
         </section>
+        <!-- /Explorer Section -->
+
         <!-- Contact Section -->
         <section id="contact" class="contact section">
+            <div class="container section-title">
+                <h2>Contact</h2>
+                <p>I'm always interested in new opportunities, collaborations, and exciting projects. Whether you have a question or just want to connect, feel free to get in touch.</p>
+            </div>
 
-        <!-- Section Title -->
-        <div class="container section-title">
-            <h2>Contact</h2>
-            <p>I'm always interested in new opportunities, collaborations, and exciting projects. Whether you have a question, a project in mind, or just want to connect, feel free to get in touch. I'll do my best to respond as soon as possible.</p>
-        </div><!-- End Section Title -->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <form action="https://formcarry.com/s/EncKrGJV-CY" method="POST" class="email-form shadow-sm border border-secondary border-opacity-25 rounded-4 p-4 p-md-5">
+                            <div class="row gy-4">
 
-        <div class="container">
+                                <div class="col-12 col-md-6">
+                                    <label for="name" class="form-label small text-secondary">Your Name</label>
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                                </div>
 
-            <div class="row gy-4">
+                                <div class="col-12 col-md-6">
+                                    <label for="email" class="form-label small text-secondary">Your Email</label>
+                                    <input type="email" id="email" class="form-control" name="email" placeholder="Your Email" required>
+                                </div>
 
-            <div class="col-lg-12">
-                <form action="https://formcarry.com/s/EncKrGJV-CY" method="POST" class="email-form">
-                    <div class="row gy-4">
+                                <div class="col-12">
+                                    <label for="message" class="form-label small text-secondary">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                                </div>
 
-                        <div class="col-md-6">
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
-                        </div>
+                                <div class="col-12 text-center pt-2">
+                                    <button type="submit" class="btn btn-accent rounded-pill px-5 py-3 fw-semibold">
+                                        <i class="bi bi-send me-2"></i>Send Message
+                                    </button>
+                                </div>
 
-                        <div class="col-md-6">
-                        <input type="email" id="email" class="form-control" name="email" placeholder="Your Email" required>
-                        </div>
-
-                        <div class="col-md-12">
-                        <textarea class="form-control" id="message" name="message" rows="6" placeholder="Message" required></textarea>
-                        </div>
-
-                        <div class="col-md-12 text-center">
-                            <button type="submit">Send Message</button>
-                        </div>
-
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
-
-            </div>
-
-        </div>
-
         </section>
         <!-- /Contact Section -->
+
     </main>
+
+    <!-- Footer -->
     <footer id="footer" class="footer light-background">
-
         <div class="footer-top">
-        <div class="container-fluid">
-            <div class="row gy-4">
-            <div class="col-lg-4 col-md-4 footer-about">
-                <img src="assets/img/logo.png" class="img-fluid"/>
-            </div>
+            <div class="container">
+                <div class="row gy-4">
 
-            <div class="col-lg-4 col-md-4 footer-links">
-                <h4>Other projects</h4>
-                <ul>
-                <li><a href="https://github.com/miguelestradam3/pokedex">Pokedex</a></li>
-                <li><a href="https://github.com/miguelestradam3/machine_learning_classifier">Jupyter - Machine Learning</a></li>
-                <li><a href="https://github.com/miguelestradam3/rick_and_morty">Rick and Morty</a></li>
-                <li><a href="https://github.com/miguelestradam3/python_images_editor">Python</a></li>
-                </ul>
-            </div>
+                    <div class="col-12 col-md-6 col-lg-4 footer-about">
+                        <div class="logo mb-3">
+                            <img src="assets/img/logo.png" alt="Ghibli Logo" style="max-height: 48px; width: auto;" />
+                        </div>
+                        <p class="text-secondary">Studio Ghibli Explorer — Discover classic anime films, memorable characters, mythical locations, and cinematic wonders.</p>
+                    </div>
 
-            <div class="col-lg-4 col-md-4 footer-links">
-                <h4>Technologies used in this project</h4>
-                <ul>
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">Javascript</a></li>
-                <li><a href="#">Bootstrap</a></li>
-                </ul>
-            </div>
+                    <div class="col-12 col-sm-6 col-lg-4 footer-links">
+                        <h4>Other projects</h4>
+                        <ul>
+                            <li><a href="https://github.com/miguelestradam3/pokedex" target="_blank" rel="noopener">Pokedex</a></li>
+                            <li><a href="https://github.com/miguelestradam3/machine_learning_classifier" target="_blank" rel="noopener">Jupyter - Machine Learning</a></li>
+                            <li><a href="https://github.com/miguelestradam3/rick_and_morty" target="_blank" rel="noopener">Rick and Morty</a></li>
+                            <li><a href="https://github.com/miguelestradam3/python_images_editor" target="_blank" rel="noopener">Python Image Editor</a></li>
+                        </ul>
+                    </div>
 
+                    <div class="col-12 col-sm-6 col-lg-4 footer-links">
+                        <h4>Technologies used in this project</h4>
+                        <ul>
+                            <li><a href="#">HTML5 / Semantic Structure</a></li>
+                            <li><a href="#">CSS3 / Responsive Flexbox & Grid</a></li>
+                            <li><a href="#">JavaScript ES6+ (Async/Await)</a></li>
+                            <li><a href="#">Bootstrap 5.3 & Icons</a></li>
+                            <li><a href="#">Studio Ghibli REST API</a></li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
         </div>
-        </div>
 
-        <div class="copyright text-center">
-        <div class="container-fluid d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
-
-            <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-            <a href="https://www.linkedin.com/in/miguel-estrada-46ba46367/"><i class="bi bi-linkedin"></i></a>
-            <a href="https://github.com/miguelestradam3"><i class="bi bi-github"></i></a>
+        <div class="copyright text-center py-4">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+                <span class="text-secondary small">&copy; Studio Ghibli Explorer &bull; All film rights belong to Studio Ghibli</span>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/miguel-estrada-46ba46367/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/miguelestradam3" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                </div>
             </div>
-
         </div>
-        </div>
-
     </footer>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/main.js"></script>.
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Bootstrap Bundle JS -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- App Scripts -->
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
